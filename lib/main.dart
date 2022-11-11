@@ -59,24 +59,32 @@ class _CalcState extends State<Calc> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        userQuestion,
-                        style: questionTextStyle,
+                    Expanded(
+                      flex:3,
+                      child: Container(
+                        padding: const EdgeInsets.all(10.0),
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          userQuestion,
+                          style: questionTextStyle,
+                        ),
                       ),
                     ),
-                    Divider(
-                      height: 10.0,
-                      color: Colors.deepPurple,
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Divider(
+                        height: 10.0,
+                        color: Colors.deepPurple,
+                      ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        userAnswer,
-                        style: answerTextStyle,
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(10.0),
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          userAnswer,
+                          style: answerTextStyle,
+                        ),
                       ),
                     )
                   ],
